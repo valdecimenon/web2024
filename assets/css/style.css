@@ -1,0 +1,112 @@
+/* comentário css: variáveis CSS globais */
+
+:root {
+
+    --cor-neve: #fdfdfd;
+    --cor-verde-claro: #e3fbe3;
+    --cor-verde-transparente: #e3fbe380;
+    --cor-verde-musgo: rgba(30, 130, 30, 0.7);
+    --cor-verde-limao: limegreen;
+    --cor-preto: #000000;
+    --cor-texto: #212529;
+    --cor-branco: #ffffff;
+    --cor-cinza: #aaaaaa;
+    --cor-cinza-escurto: #000000bf;
+    --cor-cinza-claro: #dcdcdc;
+    --cor-dourado: #eb783f;
+
+    --altura-titulo: 2em;
+    --altura-subtitulo: 1.5em;
+}
+
+body {
+    background: var(--cor-neve);
+}
+
+header {
+    background: var(--cor-verde-claro);
+    padding-block: 16px;
+    padding-inline: 16px;
+}
+
+nav {
+    /* background-color: white; */
+    height: 175px;
+    max-width: 1280px;
+    margin-inline: auto;
+
+    /* ativa layout flexbox: alinhamento padrão horizontal = row */
+    display: flex;
+    /* divide o espaçamento horizontal */
+    justify-content: space-between;
+    /* divide o espaçamento vertical */
+    align-items: center;
+}
+
+/* configura o menu do header */
+nav ul {
+    display: flex;  /* padrão = row = horizontal */
+    gap: 32px;  /* espaço entre os itens da lista */
+    list-style: none; /*  remove o marcador da lista */
+    user-select: none; /* não permite selecionar o texto */
+}
+
+/* configura o link do menu */
+nav ul a {
+    color: var(--cor-preto);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;  /* remove o underline do link */
+    text-transform: uppercase;  /* transforma em maiúsculas */
+}
+
+nav ul a:hover {
+   color: var(--cor-dourado); 
+   text-decoration: underline;
+}
+
+.banner {
+    width: 100vw;
+}
+
+/* estilo temporário */
+/*
+main {
+    background: #eb783f;
+    height: 50vb;
+}
+*/
+
+footer {
+    text-align: center;
+    /* imagem de fundo que será repetida*/
+    background: url('../img/bg.png');
+    padding-block: 16px;  /* top + bottom  */
+}
+
+/* configura texto: Copyright Mundo Verde  */
+footer p {
+    color: var(--cor-branco);
+    font-size: 13px;
+    margin-top: 16px;
+    cursor: default;
+    user-select: none;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        justify-content: right;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        
+        flex-direction: column;
+        gap: 8px;
+        padding: 5px;
+        border: 1px solid var(--cor-verde-limao);
+        border-radius: 10px;
+    }
+}
