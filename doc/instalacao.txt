@@ -1,0 +1,11 @@
+Após criar a pasta com, iniciar o projeto NodeJS:
+npm init --yes
+
+Instalar módulo do MySQL
+npm install mysql2
+
+Acrescentar o "tipo modulo" em package.json (abaixo do main)
+ "type": "module",
+
+ Instalar módulo express
+ npm install express
