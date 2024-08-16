@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <h2>Spread operator ...</h2>
+
+    <script>
+
+        // 1. Copiando arrays
+        const arrayOriginal = [1, 2, 3]
+        const arrayCopia = [...arrayOriginal]
+        console.log(arrayCopia)
+        arrayCopia.push(4)
+        console.log(arrayCopia)
+        console.log(arrayOriginal)
+
+        // 2. Combinando arrays
+        const array1 = [1, 2, 3]
+        const array2 = [4, 5, 6]
+        const arrayCombinado = [...array1, ...array2]
+        console.log('Array combinado: ', arrayCombinado)
+
+        // 3. Expansão de funções
+        function somar(a, b, c){
+            return a + b + c
+        }
+
+        const numeros = [1, 2, 3]
+        // forma "antiga"
+        // somar(numeros[0], numeros[1], numeros[0])
+        // usando spread
+        console.log(somar(...numeros))   // idem: somar(1, 2, 3)
+
+        // 4. Combinando objetos
+        const objeto1 = {
+            a: 1,
+            b: 2
+        }
+
+        const objeto2 = {
+            c: 3,
+            d: 4
+        }
+
+        const objetoCombinado = {...objeto1, ...objeto2}
+        console.log(objetoCombinado)
+
+        // adicionando propriedades
+        const adicionado = {
+            ...objeto1,
+            ...objeto2,
+            e: 5,
+            f: 6
+        }
+
+        console.log('Propriedades adicionadas: ', adicionado)
+
+
+    </script>
+
+</body>
+</html>

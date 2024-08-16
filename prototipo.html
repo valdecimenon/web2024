@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script>
+        // prototype no javascript é um objeto do qual novos objetos herdam
+        // propriedades e métodos
+
+        // função construtora
+        function Pessoa(nome, idade) {
+            this.nome = nome
+            this.idade = idade
+        }
+
+        Pessoa.prototype.saudacao = function () {
+            return `Olá! meu nome é ${this.nome}, idade: ${this.idade}`
+        }
+
+        const joao = new Pessoa('Joao', 30)
+        console.log(joao.saudacao())
+
+        // função construtora - este é o protótipo do objeto fusca
+        function Carro(modelo){
+            this.modelo = modelo
+        }
+
+        // modificando o protótipo da função construtora
+        Carro.prototype.velocidade = 0
+        Carro.prototype.acelerar = function(){
+            this.velocidade += 10
+            console.log(`${this.modelo} acelerou para ${this.velocidade} km/h`)
+        }
+
+        // cria um objeto a partir do protótipo
+        const fusca = new Carro("Fusca")
+        fusca.placa = 'AXX-1234'   // essa propriedade existe apenas no objeto fusca
+        fusca.acelerar()
+
+        // cria outro objeto a partir do protótipo
+        const porche = new Carro("Porche")
+        porche.acelerar()
+
+        // para acessar o protótipo do OBJETO
+        console.log(fusca.__proto__)
+
+        // porém o Javascript recomenda usar:
+        console.log(Object.getPrototypeOf(fusca))
+   
+
+    </script>
+
+</head>
+
+</html>

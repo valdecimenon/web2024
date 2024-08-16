@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <h2>Desestruturação de objetos</h2>
+    <script>
+
+        const objeto = {a:1, b:2, c:3, d:4}
+
+        // 1. desestruturando objeto
+        const {a, b, c} = objeto
+        console.log(a)
+        console.log(b)
+        console.log(c)
+
+        // 2. Atribuição a variáveis com nome diferente
+        const {a: alfa, b: beta, c:gama} = objeto
+        console.log('Nomes diferentes')
+        console.log(alfa)
+        console.log(beta)
+        console.log(gama)
+
+        // 3. Atribuindo valores padrão
+        const objeto2 = {a: 1,}   // y: 3
+        // desestruturando com valor padrão
+        const {a:x, y=2} = objeto2
+
+        console.log('Com valores padrão')
+        console.log(x)
+        console.log(y)
+
+        // 4. Desestruturação aninhada
+        const usuario = {
+            id: 1,
+            nome: "Maria",
+            info: {
+                idade: 30,
+                email: "maria@gmail.com"
+            }
+        }
+
+       
+        const {id, nome, info: {idade, email, uf='PR'}} = usuario
+        console.log('Desestruturação aninhada')
+        console.log(id)
+        console.log(nome)
+        console.log(idade)
+        console.log(email)
+        console.log(uf)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
