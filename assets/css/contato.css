@@ -1,0 +1,124 @@
+
+
+.painel {
+    background-color: var(--cor-cinza-escuro);
+    height: 40vh;
+}
+
+.conteudo {
+    width: 600px;
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    color: var(--cor-branco);
+    cursor: default;
+    user-select: none;
+    z-index: 0;
+}
+
+.conteudo h2 {
+    display: inline; /* obriga o elemento a ocupar somente o espaço necessario */
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--cor-dourado);
+}
+
+.conteudo p {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.conteudo a {
+    background-color: var(--cor-verde-limao);
+    color: var(--cor-branco);
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.conteudo a:hover{
+    background: var(--cor-dourado);
+    padding: 1.1em;
+}
+
+.container {
+    width: 800px;
+    margin-inline: auto;  /* centraliza o container em relação a tela */
+    display: flex;
+}
+
+form {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px var(--cor-cinza);
+    background: var(--cor-branco);
+    margin: -60px 0 40px -40px;
+    z-index: 1;
+}
+
+/* padrão de label e input é inline (ocupa somente o espaço dele) */
+form label, legend {
+    display: block;  /* muda de inline para block -> quebrando a linha  */
+    font-size: 22px;
+    color: var(--cor-texto);
+    margin: 10px 0 10px 10px;
+}
+
+form > input, textarea {
+    min-width: 95%;
+    font-size: 22px;
+    color: var(--cor-texto);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 10px;
+    outline-color: var(--cor-verde-limao);
+}
+
+form > textarea {
+    max-width: 95%;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+form > fieldset {
+    /* margem vertical: top + botom */
+    margin-block: 20px;
+}
+
+form > fieldset select {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* seleciona label contando elementos a partir do final do form (last = último) */
+form > label:nth-last-child(2){
+    margin-block: 20px;
+}
+
+form > button {
+    width: 35%;
+    padding: 15px 0;
+    margin-left: 12px;
+    background: var(--cor-verde-limao);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+form > button:hover {
+    background: var(--cor-dourado);
+    /* aumenta o botão em  20% */
+    transform: scale(1.2);
+}

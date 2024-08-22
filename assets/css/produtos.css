@@ -1,0 +1,58 @@
+main {
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid var(--cor-verde-limao);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 0 1% 2%;
+    user-select: none;
+
+    /* faz com que os elementos não saiam fora da borda */
+    box-sizing: border-box;
+}
+
+.card:hover {
+    border-color: var(--cor-dourado);
+}
+
+.card:hover img {
+    opacity: 0.7;  /* vai de 0 a 1 */
+    transition: 0.5s;
+}
+
+.card:hover h2 {
+    font-size: 32px;    
+}
+
+/* terceiro elemento do card */
+.card p:nth-child(3) {
+    font-size: 18px;
+}
+
+/* quarto elemento do card */
+.card p:nth-child(4) {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/*  Obs: pseudo-classes CSS
+    :root :hover :focus :active :link :visited :first-child :nth-child etc
+*/
+
+/* quando clicado */
+.card:active {
+    border-color: var(--cor-preto);
+}
